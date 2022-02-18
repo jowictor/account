@@ -1,0 +1,841 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>desafio-dev documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">desafio-dev documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >AccountService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/module/account/account.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerAccount" >registerAccount</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerCnab" >registerCnab</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerCompany" >registerCompany</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerPerson" >registerPerson</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#totalize" >totalize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(accountModel)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/module/account/account.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>accountModel</td>
+                                                  
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerAccount"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>registerAccount</b></span>
+                        <a href="#registerAccount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerAccount(accountDataList: <a href="../interfaces/IAccount.html" target="_self">IAccount[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/module/account/account.service.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>accountDataList</td>
+                                    <td>
+                                                <code><a href="../interfaces/IAccount.html" target="_self" >IAccount[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiBase.ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerCnab"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>registerCnab</b></span>
+                        <a href="#registerCnab"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerCnab(file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/module/account/account.service.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                            <code>Express.Multer.File</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiBase.ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerCompany"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>registerCompany</b></span>
+                        <a href="#registerCompany"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerCompany(companyList: <a href="../interfaces/ICompany.html" target="_self">ICompany[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">src/module/account/account.service.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>companyList</td>
+                                    <td>
+                                                <code><a href="../interfaces/ICompany.html" target="_self" >ICompany[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiBase.ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerPerson"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>registerPerson</b></span>
+                        <a href="#registerPerson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerPerson(personList: <a href="../interfaces/IPerson.html" target="_self">IPerson[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">src/module/account/account.service.ts:148</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>personList</td>
+                                    <td>
+                                                <code><a href="../interfaces/IPerson.html" target="_self" >IPerson[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiBase.ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="totalize"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>totalize</b></span>
+                        <a href="#totalize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>totalize(resultAccount: <a href="../classes/Account.html" target="_self">Account[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/module/account/account.service.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>resultAccount</td>
+                                    <td>
+                                                <code><a href="../classes/Account.html" target="_self" >Account[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiBase.ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ApiBase } from &quot;../../utils/ApiBase&quot;;
+import { Injectable } from &quot;@nestjs/common&quot;;
+import { InjectModel } from &quot;@nestjs/sequelize&quot;;
+//
+import { Account } from &#x27;./account.model&#x27;
+//
+import { PersonService } from &#x27;../person/person.service&#x27;;
+import { Person } from &#x27;../person/person.model&#x27;;
+import { CompanyService } from &quot;../company/company.service&quot;;
+import { Company } from &quot;../company/company.model&quot;;
+import { TransactionService } from &quot;../transaction/transaction.service&quot;;
+import { Transaction } from &quot;../transaction/transaction.model&quot;;
+import { IAccount, IAccountData } from &quot;../../interface/IAccount&quot;;
+import { IPerson } from &quot;../../interface/IPerson&quot;;
+import { ICompany } from &quot;../../interface/ICompany&quot;;
+
+@Injectable()
+export class AccountService {
+	constructor(
+		@InjectModel(Account)
+		private accountModel: typeof Account
+	) { }
+
+	public async registerCnab(file: Express.Multer.File): Promise&lt;ApiBase.ApiResponse&gt; {
+		try {
+			if (!file) return ApiBase.error(&#x27;Missing file param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
+
+			const fileString &#x3D; file.buffer.toString();
+			const accountList &#x3D; fileString.split(&quot;\n&quot;);
+
+			const accountDataList: IAccount[] &#x3D; [];
+			const personList: IPerson[] &#x3D; [];
+			const companyList: ICompany[] &#x3D; [];
+
+			const transactionService &#x3D; new TransactionService(Transaction);
+			await transactionService.registerTransaction();
+
+			if (accountList &amp;&amp; accountList.length &gt; 0) {
+				for (const accountItem of accountList) {
+					if (!accountItem) break;
+
+					// Transform Date
+					const accountDateStr &#x3D; accountItem.substring(1, 9);
+					const transformDate &#x3D; [];
+					transformDate.push(accountDateStr.substring(0, 4)) // Year
+					transformDate.push(accountDateStr.substring(4, 6)) // Month
+					transformDate.push(accountDateStr.substring(6, 8)) // Day
+					const accountDate &#x3D; new Date(&#x60;${transformDate[0]}/${transformDate[1]}/${transformDate[2]}&#x60;)
+
+					// Prepare account
+					const accountValue &#x3D; parseFloat(accountItem.substring(9, 19)) / 100;
+					const account: IAccount &#x3D; {
+						transactionId: accountItem.substring(0, 1),
+						date: accountDate,
+						value: accountValue,
+						ben_code: accountItem.substring(19, 30),
+						card: accountItem.substring(30, 42),
+						time: accountItem.substring(42, 48),
+						person_name: accountItem.substring(48, 62),
+						company_name: accountItem.substring(62, 81)
+					}
+
+					if (!personList.find(item &#x3D;&gt; item.person_name &#x3D;&#x3D;&#x3D; account.person_name)) {
+						personList.push({
+							person_name: account.person_name
+						});
+					}
+
+					if (!companyList.find(item &#x3D;&gt; item.name &#x3D;&#x3D;&#x3D; account.company_name)) {
+						companyList.push({ name: account.company_name });
+					}
+
+					accountDataList.push(account);
+				}
+			}
+
+			if (personList &amp;&amp; personList.length &gt; 0) {
+				const result &#x3D; await this.registerPerson(personList);
+				if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+			}
+
+			if (companyList &amp;&amp; companyList.length &gt; 0) {
+				const result &#x3D; await this.registerCompany(companyList);
+				if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+			}
+
+			if (accountDataList &amp;&amp; accountDataList.length &gt; 0) {
+				const result &#x3D; await this.registerAccount(accountDataList);
+				if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+			}
+
+			const resultAccount &#x3D; await this.accountModel.findAll({})
+			if (resultAccount &amp;&amp; resultAccount.length &gt; 0) {
+				const result &#x3D; await this.totalize(resultAccount);
+				if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+				return ApiBase.success(result.$data);
+			}
+
+			return ApiBase.success(true);
+		} catch (ex) {
+			throw ApiBase.exception(ex);
+		}
+	}
+
+	private async registerAccount(accountDataList: IAccount[]): Promise&lt;ApiBase.ApiResponse&gt; {
+		try {
+			if (accountDataList.length &lt;&#x3D; 0) return ApiBase.error(&#x27;Missing accountDataList param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
+
+			if (accountDataList &amp;&amp; accountDataList.length &gt; 0) {
+				const personService &#x3D; new PersonService(Person);
+				const companyService &#x3D; new CompanyService(Company);
+				const transactionService &#x3D; new TransactionService(Transaction);
+
+				for (const accountItem of accountDataList) {
+					let result &#x3D; await personService.findPerson(accountItem.person_name);
+					if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+					const personData &#x3D; result.$data;
+
+					result &#x3D; await companyService.findCompany(accountItem.company_name);
+					if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+					const companyData &#x3D; result.$data
+
+					result &#x3D; await transactionService.findTransaction(parseInt(accountItem.transactionId));
+					if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+					const transactionData &#x3D; result.$data
+
+					const accountToUpdate: IAccountData &#x3D; {
+						card: accountItem.card,
+						companyId: companyData.id,
+						date: accountItem.date,
+						personId: personData.id,
+						ben_code: accountItem.ben_code,
+						time: accountItem.time,
+						transactionId: transactionData.type,
+						value: accountItem.value
+					}
+
+					const accountResult &#x3D; await this.accountModel.create(accountToUpdate);
+					if (!accountResult) return ApiBase.error(&#x60;Fail to create account&#x60;, ApiBase.Status.FAILED);
+				}
+			}
+			return ApiBase.success(true);
+		} catch (ex) {
+			throw ApiBase.exception(ex);
+		}
+	}
+
+	private async registerPerson(personList: IPerson[]): Promise&lt;ApiBase.ApiResponse&gt; {
+		try {
+			if (personList.length &lt;&#x3D; 0) return ApiBase.error(&#x27;Missing personList param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
+
+			const personService &#x3D; new PersonService(Person);
+			if (personList &amp;&amp; personList.length &gt; 0) {
+				for (const personItem of personList) {
+					const result &#x3D; await personService.findOrCreatePerson(personItem);
+					if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+				}
+			}
+			return ApiBase.success(true);
+		} catch (ex) {
+			throw ApiBase.exception(ex);
+		}
+	}
+
+	private async registerCompany(companyList: ICompany[]): Promise&lt;ApiBase.ApiResponse&gt; {
+		try {
+			if (companyList.length &lt;&#x3D; 0) return ApiBase.error(&#x27;Missing companyList param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
+
+			const companyService &#x3D; new CompanyService(Company);
+			if (companyList &amp;&amp; companyList.length &gt; 0) {
+				for (const companyItem of companyList) {
+					const result &#x3D; await companyService.findOrCreateCompany(companyItem);
+					if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+				}
+			}
+			return ApiBase.success(true);
+		} catch (ex) {
+			throw ApiBase.exception(ex);
+		}
+	}
+
+	private async totalize(resultAccount: Account[]): Promise&lt;ApiBase.ApiResponse&gt; {
+		try {
+			if (resultAccount.length &lt;&#x3D; 0) return ApiBase.error(&#x27;Missing resultAccount param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
+			const companyIdList &#x3D; resultAccount.map(item &#x3D;&gt; item.companyId).filter((v, i, a) &#x3D;&gt; a.indexOf(v) &#x3D;&#x3D;&#x3D; i);
+			const account: object[] &#x3D; []
+
+			if (companyIdList &amp;&amp; companyIdList.length &gt; 0) {
+				for (const companyId of companyIdList) {
+					const operationByCompany &#x3D; resultAccount.filter(item &#x3D;&gt; item.companyId &#x3D;&#x3D;&#x3D; companyId);
+					if (operationByCompany &amp;&amp; operationByCompany.length &gt; 0) {
+
+						const companyService &#x3D; new CompanyService(Company);
+						let result &#x3D; await companyService.findCompany(null, companyId);
+						if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+						const companyData: ICompany &#x3D; result.$data;
+
+						const accountResult &#x3D; {
+							company: companyData.name,
+							transaction: [],
+							total: null
+						}
+
+						for (const operation of operationByCompany) {
+							const operationValue: any &#x3D; operation.value;
+							operation.value &#x3D; parseFloat(operationValue);
+
+							const transactionService &#x3D; new TransactionService(Transaction);
+							result &#x3D; await transactionService.findTransaction(operation.transactionId)
+							if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
+							const transactionData &#x3D; result.$data;
+
+							accountResult.transaction.push({
+								type: transactionData.name,
+								date: operation.date,
+								ben_code: operation.ben_code,
+								card: operation.card,
+								value: operation.value
+							})
+						}
+						const accountTotal &#x3D; operationByCompany.reduce((sum, item) &#x3D;&gt; sum + item.value, 0);
+						accountResult.total &#x3D; accountTotal;
+						account.push(accountResult);
+					}
+				}
+			}
+
+			return ApiBase.success(account);
+		} catch (ex) {
+			throw ApiBase.exception(ex);
+		}
+	}
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AccountService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
