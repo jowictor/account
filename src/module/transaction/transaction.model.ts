@@ -1,11 +1,10 @@
-import { Column, Model, Table, PrimaryKey } from "sequelize-typescript";
+import { Column, Model, Table } from "sequelize-typescript";
 
  @Table({tableName: 'transaction'})
 export class Transaction extends Model<Transaction> {
     @Column({ 
         unique: true,
     })
-    //@PrimaryKey
     type: number;
 
     @Column

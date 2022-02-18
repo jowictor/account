@@ -21,19 +21,22 @@ export class AccountService {
 		private accountModel: typeof Account
 	) { }
 
-	public async registerCnab(file: Express.Multer.File): Promise<ApiBase.ApiResponse> {
+	public async registerCnab(file: Express.Multer.File, originalFile?: string ): Promise<ApiBase.ApiResponse> {
 		try {
-			if (!file) return ApiBase.error('Missing file param', ApiBase.Status.ERROR_NULL_PARAMETER);
+			if (!file && !originalFile) return ApiBase.error('Missing file param', ApiBase.Status.ERROR_NULL_PARAMETER);
 
-			const fileString = file.buffer.toString();
+			const fileString =  (file) ? file.buffer.toString() : originalFile;
 			const accountList = fileString.split("\n");
 
 			const accountDataList: IAccount[] = [];
 			const personList: IPerson[] = [];
 			const companyList: ICompany[] = [];
 
-			const transactionService = new TransactionService(Transaction);
-			await transactionService.registerTransaction();
+			//if (!originalFile) {
+				const transactionService = new TransactionService(Transaction);
+				await transactionService.registerTransaction();
+			//}
+			
 
 			if (accountList && accountList.length > 0) {
 				for (const accountItem of accountList) {
@@ -91,7 +94,7 @@ export class AccountService {
 
 			const resultAccount = await this.accountModel.findAll({})
 			if (resultAccount && resultAccount.length > 0) {
-				const result = await this.totalize(resultAccount);
+				const result = await this.totalizer(resultAccount);
 				if (result.$status !== ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
 				return ApiBase.success(result.$data);
 			}
@@ -179,7 +182,7 @@ export class AccountService {
 		}
 	}
 
-	private async totalize(resultAccount: Account[]): Promise<ApiBase.ApiResponse> {
+	private async totalizer(resultAccount: Account[]): Promise<ApiBase.ApiResponse> {
 		try {
 			if (resultAccount.length <= 0) return ApiBase.error('Missing resultAccount param', ApiBase.Status.ERROR_NULL_PARAMETER);
 			const companyIdList = resultAccount.map(item => item.companyId).filter((v, i, a) => a.indexOf(v) === i);
