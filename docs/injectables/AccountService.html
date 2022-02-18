@@ -101,7 +101,7 @@
                             <li>
                                     <span class="modifier">Private</span>
                                     <span class="modifier">Async</span>
-                                <a href="#totalize" >totalize</a>
+                                <a href="#totalizer" >totalizer</a>
                             </li>
                         </ul>
                     </td>
@@ -188,8 +188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="105"
-                            class="link-to-prism">src/module/account/account.service.ts:105</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/module/account/account.service.ts:108</a></div>
                 </td>
             </tr>
 
@@ -253,7 +253,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>registerCnab(file: Express.Multer.File)</code>
+                    <code>registerCnab(file: Express.Multer.File, originalFile?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -289,6 +289,18 @@
 
                                     <td>
                                         No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>originalFile</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
                                     </td>
 
 
@@ -332,8 +344,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="165"
-                            class="link-to-prism">src/module/account/account.service.ts:165</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/module/account/account.service.ts:168</a></div>
                 </td>
             </tr>
 
@@ -404,8 +416,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="148"
-                            class="link-to-prism">src/module/account/account.service.ts:148</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/module/account/account.service.ts:151</a></div>
                 </td>
             </tr>
 
@@ -457,27 +469,27 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="totalize"></a>
+                    <a name="totalizer"></a>
                     <span class="name">
                         <span class="modifier">Private</span>
                         <span class="modifier">Async</span>
-                        <span ><b>totalize</b></span>
-                        <a href="#totalize"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>totalizer</b></span>
+                        <a href="#totalizer"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>totalize(resultAccount: <a href="../classes/Account.html" target="_self">Account[]</a>)</code>
+                    <code>totalizer(resultAccount: <a href="../classes/Account.html" target="_self">Account[]</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="182"
-                            class="link-to-prism">src/module/account/account.service.ts:182</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">src/module/account/account.service.ts:185</a></div>
                 </td>
             </tr>
 
@@ -554,19 +566,22 @@ export class AccountService {
 		private accountModel: typeof Account
 	) { }
 
-	public async registerCnab(file: Express.Multer.File): Promise&lt;ApiBase.ApiResponse&gt; {
+	public async registerCnab(file: Express.Multer.File, originalFile?: string ): Promise&lt;ApiBase.ApiResponse&gt; {
 		try {
-			if (!file) return ApiBase.error(&#x27;Missing file param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
+			if (!file &amp;&amp; !originalFile) return ApiBase.error(&#x27;Missing file param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
 
-			const fileString &#x3D; file.buffer.toString();
+			const fileString &#x3D;  (file) ? file.buffer.toString() : originalFile;
 			const accountList &#x3D; fileString.split(&quot;\n&quot;);
 
 			const accountDataList: IAccount[] &#x3D; [];
 			const personList: IPerson[] &#x3D; [];
 			const companyList: ICompany[] &#x3D; [];
 
-			const transactionService &#x3D; new TransactionService(Transaction);
-			await transactionService.registerTransaction();
+			//if (!originalFile) {
+				const transactionService &#x3D; new TransactionService(Transaction);
+				await transactionService.registerTransaction();
+			//}
+			
 
 			if (accountList &amp;&amp; accountList.length &gt; 0) {
 				for (const accountItem of accountList) {
@@ -624,7 +639,7 @@ export class AccountService {
 
 			const resultAccount &#x3D; await this.accountModel.findAll({})
 			if (resultAccount &amp;&amp; resultAccount.length &gt; 0) {
-				const result &#x3D; await this.totalize(resultAccount);
+				const result &#x3D; await this.totalizer(resultAccount);
 				if (result.$status !&#x3D;&#x3D; ApiBase.Status.SUCCESS) return ApiBase.error(result.$data, result.$status)
 				return ApiBase.success(result.$data);
 			}
@@ -712,7 +727,7 @@ export class AccountService {
 		}
 	}
 
-	private async totalize(resultAccount: Account[]): Promise&lt;ApiBase.ApiResponse&gt; {
+	private async totalizer(resultAccount: Account[]): Promise&lt;ApiBase.ApiResponse&gt; {
 		try {
 			if (resultAccount.length &lt;&#x3D; 0) return ApiBase.error(&#x27;Missing resultAccount param&#x27;, ApiBase.Status.ERROR_NULL_PARAMETER);
 			const companyIdList &#x3D; resultAccount.map(item &#x3D;&gt; item.companyId).filter((v, i, a) &#x3D;&gt; a.indexOf(v) &#x3D;&#x3D;&#x3D; i);

@@ -48,7 +48,7 @@ describe('AccountController', () => {
     });
 
     it('test company total', async () => {
-      expect(result.total).not.toEqual(0)
+      expect(result.total).not.toEqual(0);
     });
   });
 });
